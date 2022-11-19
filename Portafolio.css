@@ -1,0 +1,307 @@
+@import url('https://fontmeme.com/fuentes/fuente-montserrat/');
+*
+{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    margin: 0;
+}
+
+.navegacion{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    background: #730606;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.Menu > li{
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.Menu > li > a{
+    display: block;
+    padding: 20px 60px;
+    color: #ffffff;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+.Menu li a:hover{
+    color: #000000;
+    transition: all .3s;
+}
+
+.Branding{
+    width: 50%;
+    font-size: 30px;
+    margin: 100px auto;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Branding ul {
+    list-style: none;
+}
+
+.Branding1 > li{
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.Branding1 > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #000000;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+
+.Digital{
+    width: 50%;
+    font-size: 30px;
+    margin: 100px auto;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Digital ul {
+    list-style: none;
+}
+
+.Digital1 > li{
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.Digital1 > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #000000;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+p{
+    color: #ccc;
+}
+
+table{
+    margin: 50px auto;
+}
+
+
+
+
+
+
+/* SECCION GALERIA */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.light-box img{
+    width: 40vw;
+    max-height: 80vh;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #730606;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.next{
+    display: block;
+    background: #730606;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;  
+}
+
+.Digital{
+    width: 50%;
+    font-size: 30px;
+    margin: 30px auto;
+    background: #fff;
+    text-align: center;
+}
+
+.Digital ul {
+    list-style: none;
+}
+
+.Digital1 > li{
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.Digital1 > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #000000;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:400px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    .navegacion{
+        display: none;
+    }
+    .navegacion-responsive{
+        display: block;
+    }
+    .navegacion.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #000000;
+        width: 180px;
+    }
+    .navegacion.responsive ul{
+        display: block !important;
+    }
+    .navegacion.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:500px){
+    .Sobre mi .fila{
+        display: block;
+    }
+    .Sobre mi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+    .portafolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portafolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portafolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
